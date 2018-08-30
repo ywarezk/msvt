@@ -1,0 +1,10 @@
+{
+  "name": "msvt",
+  "description": "Moonshot's Click And Sale Data JS-SDK",
+  "version": "0.0.6",
+  "homepage": "https://www.moonshot-marketing.com/",
+  "dependencies": {
+    "js-cookie": "^2.2.0",
+    "url-search-params": "^1.0.2"
+  }
+}
