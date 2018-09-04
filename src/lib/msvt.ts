@@ -10,7 +10,7 @@
 
 declare var require: any;
 
-var URLSearchParams = require('url-search-params');
+var URLSearchParams = require('url-search-params/build/url-search-params.js');
 var Cookies = require('js-cookie');
 
 export class ValueTrack {
