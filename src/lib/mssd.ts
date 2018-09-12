@@ -10,7 +10,9 @@
 
 declare var require: any;
 
-var Cookies = require('js-cookie');
+if (typeof window !== 'undefined') {
+  var Cookies = require('js-cookie');
+}
 
 export class Affilate {
   private _msvtId: string;

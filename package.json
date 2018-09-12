@@ -1,10 +1,10 @@
 {
   "name": "msvt",
   "description": "Moonshot's Click And Sale Data JS-SDK",
-  "version": "0.0.7",
+  "version": "0.0.13",
   "homepage": "https://github.com/ywarezk/msvt",
   "dependencies": {
     "js-cookie": "^2.2.0",
-    "url-search-params": "^1.0.2"
+    "url-search-params-polyfill": "^5.0.0"
   }
 }

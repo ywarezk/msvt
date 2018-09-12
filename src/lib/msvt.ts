@@ -9,9 +9,12 @@
  */
 
 declare var require: any;
+declare var window: any;
 
-var URLSearchParams = require('url-search-params/build/url-search-params.js');
-var Cookies = require('js-cookie');
+if (typeof window !== 'undefined') {
+  require('url-search-params-polyfill');
+  var Cookies = require('js-cookie');
+}
 
 export class ValueTrack {
 
@@ -33,8 +36,9 @@ export class ValueTrack {
   private queryToArray = () => {
     const urlSearchParams = new URLSearchParams(location.search);
     const result = {};
-    for (let key of urlSearchParams.keys()) {
-      result[key] = urlSearchParams.getAll(key);
+    for (let key of (urlSearchParams as any).keys()) {
+      const allKeys = urlSearchParams.getAll(key);
+      result[key] = allKeys.length === 1 ? allKeys[0] : allKeys;
     }
     return result;
   }
